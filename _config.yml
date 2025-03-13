@@ -164,7 +164,7 @@ jekyll-archives:
     tag: /tags/:name/
 
 
-repository: "DlronA/STiLE.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "DlronA/arnie-blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 comments:
   provider: "giscus"
   giscus:

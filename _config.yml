@@ -19,6 +19,8 @@ email: bw.yao@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a blog about my life, my thoughts, and my work.
 
+url: https://stile.cc/
+
 # twitter_username: username
 # github_username: username
 minimal_mistakes_skin: dirt

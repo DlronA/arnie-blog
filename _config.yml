@@ -346,6 +346,7 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
+      #classes: wide
   # _pages
   - scope:
       path: ""
@@ -353,7 +354,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      # classes: wide
+      #classes: wide
       # toc: true
       # toc_sticky: true
   - scope:

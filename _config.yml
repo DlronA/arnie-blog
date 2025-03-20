@@ -184,6 +184,7 @@ include:
   - .htaccess
   - _pages
   - _sass
+  - assets
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

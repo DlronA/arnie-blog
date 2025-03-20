@@ -1,9 +1,33 @@
+# main links
 main:
-  - title: "文章"
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  - title: "Posts"
     url: /year-archive/
-  - title: "分类"
+    description: "按年归档已发表的文章"
+  - title: "Categories"
     url: /categories/
-  - title: "标签"
+    description: "按类别归档已发表的文章"
+  - title: "Tags"
     url: /tags/
-  - title: "关于"
+    description: "按标签归档已发表的文章"
+  - title: "About"
     url: /about/
+    description: "网站作者的一些碎碎念"
+  # - title: "Pages"
+  #   url: /page-archive/
+  # - title: "Collections"
+  #   url: /collection-archive/
+  # - title: "External Link"
+  #   url: https://google.com
+  #   target: _blank
+  # - title: "Sitemap"
+  #   url: /sitemap/

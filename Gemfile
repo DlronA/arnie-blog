@@ -1,21 +1,20 @@
-source "https://rubygems.org"
+# Gemfile
 
-gem "github-pages", group: :jekyll_plugins
+source 'https://rubygems.org'
 
-gem "tzinfo-data"
-gem "wdm", "~> 0.1.1", :platforms => [:mswin, :mingw]  # Windows 文件监听
-gem "jekyll-watch", "~> 2.0"  # WSL 文件监听优化
+# gem "jekyll", "~> 3.9"
 
-# If you have any plugins, put them here!
+# Local theme method
+gem "minimal-mistakes-jekyll"
+
+
+# Remote theme method
 group :jekyll_plugins do
-  gem "jekyll-seo-tag"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-gist"
-  gem "jekyll-feed"
-  gem "jemoji"
-  gem "jekyll-include-cache"
+  #gem "github-pages"
+  #gem "jekyll-include-cache"
   gem "jekyll-algolia"
-  gem 'jekyll-archives'
-  gem 'faraday-retry'
+  gem "jekyll-archives"
+  #gem "jekyll-sitemap"
+  #gem "jekyll-feed"
+  #gem "jekyll-seo-tag"
 end

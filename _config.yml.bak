@@ -1,0 +1,205 @@
+# Welcome to Jekyll!
+# URL: https://mmistakes.github.io/minimal-mistakes/docs/configuration
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: STiLE
+subtitle: 拾籍而上
+email: bw.yao@outlook.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This is a blog about my life, my thoughts, and my work.
+
+# 本地验证需要留空
+# url: https://stile.cc/
+# baseurl: ""
+
+# twitter_username: username
+# github_username: username
+minimal_mistakes_skin: dirt
+search: true
+
+# Site masthead logoPermalink
+# logo: /assets/images/logo.png
+
+# To assign a fallback teaser image used in the “Related Posts”
+teaser: /assets/images/teaser.jpg
+
+# Breadcrumb navigation (beta)
+breadcrumbs: true  # disabled by default
+
+# To enable a copy button on code blocks
+enable_copy_code_button: true
+
+# Build settings
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes"
+# theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  #- jekyll-remote-theme
+  #- jekyll-paginate
+  #- jekyll-sitemap
+  #- jekyll-gist
+  #- jekyll-feed
+  #- jekyll-seo-tag
+  #- jemoji
+  - jekyll-include-cache
+  - github-pages
+
+author:
+  name   : "Arnold Yao"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "应无所住而生其心。"
+  # location: "Beijing"
+  links:  # fa-fw 用来控制图标大小
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://"
+    - label: "​WeChat"
+      icon: "fa-brands fa-fw fa-weixin"
+      url: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkyMTMzODA0MQ=="
+    - label: "ZhiHu"
+      icon: "fa-brands fa-fw fa-zhihu"
+      url: "https://www.zhihu.com/people/jiang-yang-46-25"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DlronA"
+    - label: "E-Mail"
+      icon: "fa-solid fa-fw fa-square-envelope"
+      url: "mailto:bw.yao@outlook.com?subject=用户反馈&body=姓名：%0D%0A问题描述："
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
+
+footer:
+  links:
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    - label: "Telegram"
+      icon: "fa-brands fa-fw fa-telegram"
+      url: "https://t.me/Arnie912"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/DlronA"
+    - label: "E-Mail"
+      icon: "fa-solid fa-fw fa-square-envelope"
+      url: "mailto:bw.yao@outlook.com?subject=用户反馈&body=姓名：%0D%0A问题描述："
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+
+repository: "DlronA/arnie-blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id              : "R_kgDOOH3UrQ" # Shown during giscus setup at https://giscus.app
+    category_name        : "Announcements" # Full text name of the category
+    category_id          : "DIC_kwDOOH3Urc4Cn-0h" # Shown during giscus setup at https://giscus.app
+    discussion_term      : "pathname" # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : "1" # '1' for enabled (default), '0' for disabled
+    theme                : "preferred_color_scheme" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    input_position: "top"
+    loading: "lazy"
+
+search_provider: algolia
+
+algolia:
+  application_id: HCWAP315EX # YOUR_APPLICATION_ID
+  index_name: 'jekyll_' # YOUR_INDEX_NAME
+  search_only_api_key: 63c7abee26598ea88f5009673c80ac99 # YOUR_SEARCH_ONLY_API_KEY
+  powered_by: true # true (default), false
+
+# Compressing the HTML
+compress_html:
+  clippings: all
+  ignore:
+    envs: development  # disable compression in dev environment
+
+favicon:
+  ico: "/assets/images/favicon.ico"       # 传统ICO图标
+  png: "/assets/images/favicon-96x96.png" # 现代浏览器PNG图标
+  apple_touch_icon: "/assets/images/apple-touch-icon.png" # iOS图标

@@ -36,3 +36,91 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
+/* /_includes/footer/custom.html: 配置网站知识共享许可协议的样式*/
+.license-container {
+    text-align: center;
+    /* 居中对齐 */
+    font-size: 14px;
+    /* 适当调整字体大小 */
+    color: #555;
+    /* 提高对比度 */
+    padding: 15px 0;
+    /* 增加上下间距 */
+}
+
+.license-container p {
+    margin-bottom: 10px;
+    /* 文字和图标之间的间距 */
+}
+
+.license-container a {
+    text-decoration: none;
+    /* 去掉下划线 */
+    color: #d9534f;
+    /* 让超链接颜色变成深红色，吸引注意 */
+    font-weight: bold;
+    /* 加粗 */
+}
+
+.license-icon {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    /* 放大图标 */
+    opacity: 0.9;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.license-icon:hover {
+    transform: scale(1.1);
+    /* 悬停放大 */
+    opacity: 1;
+}
+
+// 自定义中文字体
+// 使用思源黑体（Noto Sans SC）
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("../fonts/NotoSansSC-Regular.ttf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("../fonts/NotoSansSC-Bold.ttf") format("opentype");
+    font-weight: bold;
+}
+
+
+// 让正文字体稍微大一些，行距保持舒适
+.page__content p,
+.page__content li,
+.page__content blockquote,
+.page__content table,
+.page__content td,
+.page__content th {
+    font-size: 18px !important; // 适当调整到 15.5px
+    line-height: 1.8 !important; // 增加行距，让阅读更舒适
+}
+
+// 让小标题字体适当放大，增强层次感
+.page__content h2 {
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+.page__content h3 {
+    font-size: 21px !important;
+    font-weight: bold !important;
+}
+
+.page__content h4 {
+    font-size: 19px !important;
+    font-weight: bold !important;
+}
+
+// 代码块字体不变，避免影响排版
+.page__content code,
+.page__content pre {
+    font-size: 16px !important;
+}

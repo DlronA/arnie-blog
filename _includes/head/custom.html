@@ -22,4 +22,21 @@
 <!-- 引入 霞鹜文楷（LXGW WenKai） -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lxgw/LxgwWenkai-Webfont@latest/style.css">
 
+<!-- 配置明/暗模式 -->
+<link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
+<link rel="stylesheet alternate" href="/assets/css/theme-dark.css" id="theme_source_dark">
+<script>
+    let theme = sessionStorage.getItem('theme');
+    if (theme === "dark") {
+        sessionStorage.setItem('theme', 'dark');
+        node1 = document.getElementById('theme_source');
+        node2 = document.getElementById('theme_source_dark');
+        node1.setAttribute('rel', 'stylesheet alternate');
+        node2.setAttribute('rel', 'stylesheet');
+    }
+    else {
+        sessionStorage.setItem('theme', 'light');
+    }
+</script>
+
 <!-- end custom head snippets -->

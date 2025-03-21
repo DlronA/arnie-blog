@@ -79,6 +79,13 @@ algolia:
   index_name             : 'jekyll_' # YOUR_INDEX_NAME
   search_only_api_key    : 63c7abee26598ea88f5009673c80ac99 # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : true # true (default), false
+  # 插件专用参数 (新增)
+  settings:
+    attributesForFaceting: ["tags"]
+    searchableAttributes: ["title", "excerpt", "content"]
+  files_to_exclude:
+    - _drafts/*.md
+    - node_modules/**/*
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true

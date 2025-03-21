@@ -43,6 +43,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Generate Algolia index
+        env:
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }} # 使用Admin key
+        run: |
+          bundle exec jekyll algolia
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

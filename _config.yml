@@ -82,7 +82,7 @@ algolia:
   # 插件专用参数 (新增)
   settings:
     attributesForFaceting: ["tags"]
-    searchableAttributes: ["title", "excerpt", "content"]
+    searchableAttributes: ["title", "excerpt", "content", "categories", "tags", "comments", "date"]
   files_to_exclude:
     - _drafts/*.md
     - node_modules/**/*

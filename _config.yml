@@ -127,7 +127,7 @@ author:
   name             : "拾籍而上"
   avatar           : /assets/images/bio-photo.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "应无所住而生其心。"
-  location         : "海淀, 北京"
+  location         : "北 京"
   email            : 
   links:
     - label: "E-Mail"
@@ -228,7 +228,8 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
-markdown: kramdown
+# Ref: https://www.jekyll.com.cn/docs/configuration/markdown/
+markdown: kramdown # kramdown(default), CommonMark, CommonMarkGhPages, 
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
@@ -236,16 +237,25 @@ incremental: false
 
 
 # Markdown Processing
+# Kramdown
+# Ref: https://kramdown.gettalong.org/options.html
 kramdown:
   input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  math_engine: mathjax
+  # hard_wrap: false
+  # auto_ids: true
+  # footnote_nr: 1
+  # entity_output: as_char
+  # toc_levels: 1..6
+  # smart_quotes: lsquo,rsquo,ldquo,rdquo
+  # enable_coderay: false
+  parse_block_html: true
 
+# CommonMarkGhPages:
+# Ref: https://github.com/github/jekyll-commonmark-ghpages
+# commonmark:
+#   options: ["UNSAFE", "SMART", "FOOTNOTES"]
+#   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 # Sass/SCSS
 sass:
@@ -292,8 +302,10 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-algolia
 
 # mimic GitHub Pages with --safe
+# Ref: https://pages.github.com/versions/
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
@@ -355,6 +367,7 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
+      mathjax: true
       #classes: wide
   # _pages
   - scope:
